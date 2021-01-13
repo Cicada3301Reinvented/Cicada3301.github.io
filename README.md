@@ -1,4 +1,4 @@
-# Hack for Better 2021
+# Cicada 3301: Reinvented
 
 ## Status
 
