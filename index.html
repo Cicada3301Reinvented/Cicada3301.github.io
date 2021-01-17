@@ -1,1201 +1,847 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Cicada 3301: Reinvented</title>
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+         href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+         rel="stylesheet"
+      />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
+         rel="stylesheet"
+      />
+      <title>Cicada 3301: Reinvented</title>
 
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
+      <link rel="stylesheet" href="/style.css" />
 
-    <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
-  </head>
-  <body>
-    <!-- header-->
-    <nav>
-      <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-        <div class="relative flex items-center justify-between h-16">
-          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            <!-- Mobile menu button-->
-            <button
-              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              aria-expanded="false"
-              id="toggleNav"
-            >
-              <svg
-                class="block h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewbox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
+      <!--Needed for scroll animations -->
+      <link rel="stylesheet" type="text/css" href="/animate.css" />
+      <script src="/wow.min.js"></script>
+      <script>
+         new WOW().init()
+      </script>
 
-              <svg
-                class="hidden h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewbox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
-          <div
-            class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"
-          >
-            <div
-              class="flex-shrink-0 flex items-center cursor-pointer title-font font-semibold"
-              id="title"
-            >
-              <a href="/">Cicada 3301: Reinvented</a>
+      <script src="/script.js" defer></script>
+   </head>
+   <body>
+      <nav>
+         <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-16">
+               <div
+                  class="absolute inset-y-0 left-0 flex items-center sm:hidden"
+               >
+                  <!-- Mobile menu button-->
+                  <button
+                     class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                     aria-expanded="false"
+                     id="toggleNav"
+                  >
+                     <svg
+                        class="block h-6 w-6"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewbox="0 0 24 24"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                     >
+                        <path
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                           stroke-width="2"
+                           d="M4 6h16M4 12h16M4 18h16"
+                        />
+                     </svg>
+
+                     <svg
+                        class="hidden h-6 w-6"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewbox="0 0 24 24"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                     >
+                        <path
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                           stroke-width="2"
+                           d="M6 18L18 6M6 6l12 12"
+                        />
+                     </svg>
+                  </button>
+               </div>
+               <div
+                  class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"
+               >
+                  <div
+                     class="flex-shrink-0 flex items-center cursor-pointer font-semibold"
+                     id="title"
+                  >
+                     <a href="/">Cicada 3301: Reinvented</a>
+                  </div>
+                  <div class="hidden sm:block sm:ml-6">
+                     <div class="flex space-x-4">
+                        <a
+                           href="#about-section"
+                           class="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                           >About Hackathon</a
+                        >
+                        <a
+                           href="#timeline"
+                           class="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                           >Timeline</a
+                        >
+                        <a
+                           href="#sponsors"
+                           class="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                           >Sponsors</a
+                        >
+                        <a
+                           href="#faq"
+                           class="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                           >FAQs</a
+                        >
+                        <a
+                           href="#contactus"
+                           class="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                           >Contact Us</a
+                        >
+
+                        <a
+                           href="/team.html"
+                           class="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                           >Team</a
+                        >
+                     </div>
+                  </div>
+               </div>
+               <div
+                  class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+               ></div>
             </div>
-            <div class="hidden sm:block sm:ml-6">
-              <div class="flex space-x-4">
-                <a
-                  href="#about-section"
-                  class="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >About Hackathon</a
-                >
-                <a
-                  href="#timeline"
-                  class="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >Timeline</a
-                >
-                <a
-                  href="#faq"
-                  class="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >FAQs</a
-                >
+         </div>
 
-                <a
-                  href="/team.html"
-                  class="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >Team</a
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
-          ></div>
-        </div>
-      </div>
-
-      <!--
+         <!--
     Mobile menu, toggle classes based on menu state.
 
     Menu open: "block", Menu closed: "hidden"
   -->
-      <div class="hidden sm:hidden" id="toggleClass">
-        <div class="px-2 pt-2 pb-3 space-y-1">
-          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-          <a
-            href="#about-section"
-            class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >About Hackathon</a
-          >
-          <a
-            href="#timeline"
-            class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >Timeline</a
-          >
-          <a
-            href="#faq"
-            class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >FAQs</a
-          >
-          <a
-            href="/team.html"
-            class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >Team</a
-          >
-        </div>
-      </div>
-    </nav>
-
-    <!--  hero    -->
-    <section class="text-gray-600 body-font pt-12" id="hero">
-      <div
-        class="container mx-auto flex px-5 sm:py-12 py-12 md:flex-row flex-col items-center"
-      >
-        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-          <img
-            class="object-cover object-center rounded"
-            alt="hero"
-            src="https://cdn.glitch.com/ddbf2cd7-5dc8-4a55-ae8f-e5f885f28e8b%2FUI_UX%20design_corrected.png?v=1609850613565"
-          />
-        </div>
-        <div
-          class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left text-center max-w-xl"
-        >
-          <h1
-            class="title-font sm:text-4xl text-2xl mb-4 font-bold text-gray-900 text-left"
-          >
-            Cicada 3301: Reinvented
-          </h1>
-          <p class="mb-8 leading-relaxed md:text-lg text-left">
-            Cicada 3301: Reinvented is a 36 hours long virtual hackathon
-            organized by Microsoft Technical Student Club — DA-IICT, where you
-            can design, code and create solutions to real-life problems.
-          </p>
-          <div class="flex justify-center">
-            <button
-              class="inline-flex text-white bg-black border-0 py-2 px-6 focus:outline-none rounded"
-            >
-              Applications Open Soon
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- *** About section *** -->
-
-    <section class="text-gray-600 body-font" id="about-section">
-      <div
-        class="container flex flex-wrap px-5 py-24 mx-auto justify-center text-left"
-      >
-        <div class="md:w-1/2 md:pr-12 md:py-8 md:mb-0">
-          <h1 class="sm:text-3xl text-2xl font-bold title-font mb-2">
-            Bring out the hacker in you!
-          </h1>
-          <p class="leading-relaxed md:text-base pt-4">
-            Cicada 3301: Reinvented is an initiative by MSTC, DA-IICT to provide
-            students from colleges across India, with a platform to prove their
-            development skills by solving some of the prevelent problems of
-            recent times. The 36 hour hackathon would offer the participants
-            problem statements based on different themes. It will be an open
-            invitation for creative minds to indulge in critical thinking,
-            problem solving and most importantly, to showcase their capabilities
-            in the domain of development. The projects made and the ideas
-            ignited would be the participants’ contribution to open source and
-            the global developer community. By the end of the hackathon, the
-            participating teams are to develop any sort of tech-based solutions
-            to the chosen problem statement.
-          </p>
-          <p class="leading-relaxed md:text-base pt-4">
-            It would surely be an enriching experience, with a great opportunity
-            to learn. Cicada 3301: Reinvented, with the attractive prizes and
-            goodies it has to offer, is designed to provide the thrust of
-            encouragement for young minds to think, develop and come up with
-            something real!
-          </p>
-          <br /><br />
-          <p style="text-align:center;font-size:25px;">
-            Prizes Worth: <br />
-            <span style="font-size:40px">Over ₹ 60,000</span>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- *** Timeline *** -->
-    <!-- component -->
-    <section class="py-10" id="timeline">
-      <h1
-        class="sm:text-3xl text-2xl font-bold title-font mb-2 text-gray-900 text-center timeline-heading"
-      >
-        Timeline
-      </h1>
-      <center>
-        <hr
-          style="height:2px; border-width:0; background-color:#CCCCCC"
-          width="50%"
-        />
-      </center>
-
-      <!-- Tab links -->
-      <div class="tab">
-        <button
-          class="tablinks"
-          onclick="openCity(event, 'day1')"
-          id="defaultOpen"
-        >
-          March 27, 2020 (Day 1)
-        </button>
-        <button class="tablinks" onclick="openCity(event, 'day2')" id="bt2">
-          March 28, 2021 (Day 2)
-        </button>
-        <button class="tablinks" onclick="openCity(event, 'day3')" id="bt3">
-          March 29, 2021 (Day 3)
-        </button>
-      </div>
-
-      <!-- Tab content -->
-      <div id="day1" class="tabcontent">
-        <div
-          class="container mx-auto w-full h-full text-sm sm:text-normal timeline-box"
-        >
-          <div class="relative wrap overflow-hidden py-10 h-full">
-            <div
-              class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border"
-              style="left: 50%"
-            ></div>
-            <!-- right timeline -->
-            <div
-              class="mb-8 flex justify-between items-center w-full right-timeline"
-            >
-              <div class="order-1 w-5/12"></div>
-              <div
-                class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
-              >
-                <h1 class="mx-auto font-semibold text-lg text-white">1</h1>
-              </div>
-              <div
-                class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4 right-padded"
-              >
-                <h3 class="mb-3 font-bold text-white text-xl">Inauguration</h3>
-                <p
-                  class="text-sm leading-snug tracking-wide text-gray-100 text-opacity-100"
-                >
-                  8:00 pm
-                </p>
-              </div>
+         <div class="hidden sm:hidden" id="toggleClass">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+               <a
+                  href="#about-section"
+                  class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  >About Hackathon</a
+               >
+               <a
+                  href="#timeline"
+                  class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  >Timeline</a
+               >
+               <a
+                  href="#sponsors"
+                  class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  >Sponsors</a
+               >
+               <a
+                  href="#faq"
+                  class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  >FAQs</a
+               >
+               <a
+                  href="#contactus"
+                  class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  >Contact Us</a
+               >
+               <a
+                  href="/team.html"
+                  class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  >Team</a
+               >
             </div>
+         </div>
+      </nav>
 
-            <!-- left timeline -->
-            <div
-              class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
-            >
-              <div class="order-1 w-5/12"></div>
-              <div
-                class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
-              >
-                <h1 class="mx-auto text-white font-semibold text-lg">2</h1>
-              </div>
-              <div
-                class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4"
-                style="text-align: right"
-              >
-                <h3 class="mb-3 font-bold text-white text-xl">
-                  Problem Statements Release and Mentor Allocation
-                </h3>
-                <p
-                  class="text-sm font-medium leading-snug tracking-wide text-gray-100 text-opacity-100"
-                >
-                  8:30 pm
-                </p>
-              </div>
+      <!--  hero    -->
+      <section class="text-gray-600 body-font pt-12" id="hero">
+         <div
+            class="container mx-auto flex px-5 sm:py-12 py-12 md:flex-row flex-col items-center"
+         >
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+               <img
+                  class="object-cover object-center rounded wow fadeInLeft"
+                  alt="hero"
+                  src="./assets/final_hero.png"
+               />
             </div>
-
-            <!-- right timeline -->
             <div
-              class="mb-8 flex justify-between items-center w-full right-timeline"
+               class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left text-center max-w-xl wow fadeInRight"
             >
-              <div class="order-1 w-5/12"></div>
-              <div
-                class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
-              >
-                <h1 class="mx-auto font-semibold text-lg text-white">3</h1>
-              </div>
-              <div
-                class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4"
-              >
-                <h3 class="mb-3 font-bold text-white text-xl">
-                  Start of Hacking Phase-I
-                </h3>
-                <p
-                  class="text-sm leading-snug tracking-wide text-gray-100 text-opacity-100"
-                >
-                  9:00 pm
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="day2" class="tabcontent">
-        <div
-          class="container mx-auto w-full h-full text-sm sm:text-normal timeline-box"
-        >
-          <div class="relative wrap overflow-hidden py-10 h-full">
-            <div
-              class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border"
-              style="left: 50%"
-            ></div>
-            <!-- right timeline -->
-            <div
-              class="mb-8 flex justify-between items-center w-full right-timeline"
-            >
-              <div class="order-1 w-5/12"></div>
-              <div
-                class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
-              >
-                <h1 class="mx-auto font-semibold text-lg text-white">4</h1>
-              </div>
-              <div
-                class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4"
-              >
-                <h3 class="mb-3 font-bold text-white text-xl">
-                  End of Hacking Phase-I
-                </h3>
-                <p
-                  class="text-sm leading-snug tracking-wide text-gray-100 text-opacity-100"
-                >
-                  2:00 am
-                </p>
-              </div>
-            </div>
-
-            <!-- left timeline -->
-            <div
-              class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
-            >
-              <div class="order-1 w-5/12"></div>
-              <div
-                class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
-              >
-                <h1 class="mx-auto text-white font-semibold text-lg">5</h1>
-              </div>
-              <div
-                class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4"
-                style="text-align: right"
-              >
-                <h3 class="mb-3 font-bold text-white text-xl">
-                  Session-1
-                </h3>
-                <p
-                  class="text-sm font-medium leading-snug tracking-wide text-gray-100 text-opacity-100"
-                >
-                  2:15 am
-                </p>
-              </div>
-            </div>
-
-            <!-- right timeline -->
-            <div
-              class="mb-8 flex justify-between items-center w-full right-timeline"
-            >
-              <div class="order-1 w-5/12"></div>
-              <div
-                class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
-              >
-                <h1 class="mx-auto font-semibold text-lg text-white">6</h1>
-              </div>
-              <div
-                class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4"
-              >
-                <h3 class="mb-3 font-bold text-white text-xl">
-                  Start of Hacking Phase-II
-                </h3>
-                <p
-                  class="text-sm leading-snug tracking-wide text-gray-100 text-opacity-100"
-                >
-                  3:00 am
-                </p>
-              </div>
-            </div>
-
-            <!-- left timeline -->
-            <div
-              class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
-            >
-              <div class="order-1 w-5/12"></div>
-              <div
-                class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
-              >
-                <h1 class="mx-auto text-white font-semibold text-lg">7</h1>
-              </div>
-              <div
-                class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4"
-                style="text-align: right"
-              >
-                <h3 class="mb-3 font-bold text-white text-xl">
-                  End of Hacking Phase-II
-                </h3>
-                <p
-                  class="text-sm font-medium leading-snug tracking-wide text-gray-100 text-opacity-100"
-                >
-                  7:00 am
-                </p>
-              </div>
-            </div>
-
-            <!-- right timeline -->
-            <div
-              class="mb-8 flex justify-between items-center w-full right-timeline"
-            >
-              <div class="order-1 w-5/12"></div>
-              <div
-                class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
-              >
-                <h1 class="mx-auto font-semibold text-lg text-white">8</h1>
-              </div>
-              <div
-                class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4"
-              >
-                <h3 class="mb-3 font-bold text-white text-xl">
-                  Start of Hacking Phase-III
-                </h3>
-                <p
-                  class="text-sm leading-snug tracking-wide text-gray-100 text-opacity-100"
-                >
-                  9:00 am
-                </p>
-              </div>
-            </div>
-
-            <!-- left timeline -->
-            <div
-              class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
-            >
-              <div class="order-1 w-5/12"></div>
-              <div
-                class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
-              >
-                <h1 class="mx-auto text-white font-semibold text-lg">9</h1>
-              </div>
-              <div
-                class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4"
-                style="text-align: right"
-              >
-                <h3 class="mb-3 font-bold text-white text-xl">
-                  End of Hacking Phase-III
-                </h3>
-                <p
-                  class="text-sm font-medium leading-snug tracking-wide text-gray-100 text-opacity-100"
-                >
-                  11:00 am
-                </p>
-              </div>
-            </div>
-
-            <!-- right timeline -->
-            <div
-              class="mb-8 flex justify-between items-center w-full right-timeline"
-            >
-              <div class="order-1 w-5/12"></div>
-              <div
-                class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
-              >
-                <h1 class="mx-auto font-semibold text-lg text-white">10</h1>
-              </div>
-              <div
-                class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4"
-              >
-                <h3 class="mb-3 font-bold text-white text-xl">
-                  Session-2
-                </h3>
-                <p
-                  class="text-sm leading-snug tracking-wide text-gray-100 text-opacity-100"
-                >
-                  11:30 am
-                </p>
-              </div>
-            </div>
-
-            <!-- left timeline -->
-            <div
-              class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
-            >
-              <div class="order-1 w-5/12"></div>
-              <div
-                class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
-              >
-                <h1 class="mx-auto text-white font-semibold text-lg">11</h1>
-              </div>
-              <div
-                class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4"
-                style="text-align: right"
-              >
-                <h3 class="mb-3 font-bold text-white text-xl">
-                  Start of Hacking Phase-IV
-                </h3>
-                <p
-                  class="text-sm font-medium leading-snug tracking-wide text-gray-100 text-opacity-100"
-                >
-                  12:45 pm
-                </p>
-              </div>
-            </div>
-
-            <!-- right timeline -->
-            <div
-              class="mb-8 flex justify-between items-center w-full right-timeline"
-            >
-              <div class="order-1 w-5/12"></div>
-              <div
-                class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
-              >
-                <h1 class="mx-auto font-semibold text-lg text-white">12</h1>
-              </div>
-              <div
-                class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4"
-              >
-                <h3 class="mb-3 font-bold text-white text-xl">
-                  End of Hacking Phase-IV
-                </h3>
-                <p
-                  class="text-sm leading-snug tracking-wide text-gray-100 text-opacity-100"
-                >
-                  3:00 pm
-                </p>
-              </div>
-            </div>
-
-            <!-- left timeline -->
-            <div
-              class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
-            >
-              <div class="order-1 w-5/12"></div>
-              <div
-                class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
-              >
-                <h1 class="mx-auto text-white font-semibold text-lg">13</h1>
-              </div>
-              <div
-                class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4"
-                style="text-align: right"
-              >
-                <h3 class="mb-3 font-bold text-white text-xl">
-                  Session-3
-                </h3>
-                <p
-                  class="text-sm font-medium leading-snug tracking-wide text-gray-100 text-opacity-100"
-                >
-                  3:15 pm
-                </p>
-              </div>
-            </div>
-
-            <!-- right timeline -->
-            <div
-              class="mb-8 flex justify-between items-center w-full right-timeline"
-            >
-              <div class="order-1 w-5/12"></div>
-              <div
-                class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
-              >
-                <h1 class="mx-auto font-semibold text-lg text-white">14</h1>
-              </div>
-              <div
-                class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4"
-              >
-                <h3 class="mb-3 font-bold text-white text-xl">
-                  Session-4
-                </h3>
-                <p
-                  class="text-sm leading-snug tracking-wide text-gray-100 text-opacity-100"
-                >
-                  4:00 pm
-                </p>
-              </div>
-            </div>
-
-            <!-- left timeline -->
-            <div
-              class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
-            >
-              <div class="order-1 w-5/12"></div>
-              <div
-                class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
-              >
-                <h1 class="mx-auto text-white font-semibold text-lg">15</h1>
-              </div>
-              <div
-                class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4"
-                style="text-align: right"
-              >
-                <h3 class="mb-3 font-bold text-white text-xl">
-                  Start of Hacking Phase-V
-                </h3>
-                <p
-                  class="text-sm font-medium leading-snug tracking-wide text-gray-100 text-opacity-100"
-                >
-                  5:15 pm
-                </p>
-              </div>
-            </div>
-
-            <!-- right timeline -->
-            <div
-              class="mb-8 flex justify-between items-center w-full right-timeline"
-            >
-              <div class="order-1 w-5/12"></div>
-              <div
-                class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
-              >
-                <h1 class="mx-auto font-semibold text-lg text-white">16</h1>
-              </div>
-              <div
-                class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4"
-              >
-                <h3 class="mb-3 font-bold text-white text-xl">
-                  Mid-Evaluations
-                </h3>
-                <p
-                  class="text-sm leading-snug tracking-wide text-gray-100 text-opacity-100"
-                >
-                  8:00 pm
-                </p>
-              </div>
-            </div>
-
-            <!-- left timeline -->
-            <div
-              class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
-            >
-              <div class="order-1 w-5/12"></div>
-              <div
-                class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
-              >
-                <h1 class="mx-auto text-white font-semibold text-lg">17</h1>
-              </div>
-              <div
-                class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4"
-                style="text-align: right"
-              >
-                <h3 class="mb-3 font-bold text-white text-xl">
-                  End of Hacking Phase-V
-                </h3>
-                <p
-                  class="text-sm font-medium leading-snug tracking-wide text-gray-100 text-opacity-100"
-                >
-                  10:00 pm
-                </p>
-              </div>
-            </div>
-
-            <!-- right timeline -->
-            <div
-              class="mb-8 flex justify-between items-center w-full right-timeline"
-            >
-              <div class="order-1 w-5/12"></div>
-              <div
-                class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
-              >
-                <h1 class="mx-auto font-semibold text-lg text-white">18</h1>
-              </div>
-              <div
-                class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4"
-              >
-                <h3 class="mb-3 font-bold text-white text-xl">
-                  Session-5
-                </h3>
-                <p
-                  class="text-sm leading-snug tracking-wide text-gray-100 text-opacity-100"
-                >
-                  10:15 pm
-                </p>
-              </div>
-            </div>
-
-            <!-- left timeline -->
-            <div
-              class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
-            >
-              <div class="order-1 w-5/12"></div>
-              <div
-                class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
-              >
-                <h1 class="mx-auto text-white font-semibold text-lg">19</h1>
-              </div>
-              <div
-                class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4"
-                style="text-align: right"
-              >
-                <h3 class="mb-3 font-bold text-white text-xl">
-                  Session-6
-                </h3>
-                <p
-                  class="text-sm font-medium leading-snug tracking-wide text-gray-100 text-opacity-100"
-                >
-                  11:30 pm
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="day3" class="tabcontent">
-        <div
-          class="container mx-auto w-full h-full text-sm sm:text-normal timeline-box"
-        >
-          <div class="relative wrap overflow-hidden py-10 h-full">
-            <div
-              class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border"
-              style="left: 50%"
-            ></div>
-
-            <!-- right timeline -->
-            <div
-              class="mb-8 flex justify-between items-center w-full right-timeline"
-            >
-              <div class="order-1 w-5/12"></div>
-              <div
-                class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
-              >
-                <h1 class="mx-auto font-semibold text-lg text-white">20</h1>
-              </div>
-              <div
-                class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4"
-              >
-                <h3 class="mb-3 font-bold text-white text-xl">
-                  Start of Hacking Phase-VI
-                </h3>
-                <p
-                  class="text-sm leading-snug tracking-wide text-gray-100 text-opacity-100"
-                >
-                  12:45 am
-                </p>
-              </div>
-            </div>
-
-            <!-- left timeline -->
-            <div
-              class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
-            >
-              <div class="order-1 w-5/12"></div>
-              <div
-                class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
-              >
-                <h1 class="mx-auto text-white font-semibold text-lg">21</h1>
-              </div>
-              <div
-                class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4"
-                style="text-align: right"
-              >
-                <h3 class="mb-3 font-bold text-white text-xl">
-                  End of Hacking Phase-VI; Final Submission
-                </h3>
-                <p
-                  class="text-sm font-medium leading-snug tracking-wide text-gray-100 text-opacity-100"
-                >
-                  8:00 am
-                </p>
-              </div>
-            </div>
-
-            <!-- right timeline -->
-            <div
-              class="mb-8 flex justify-between items-center w-full right-timeline"
-            >
-              <div class="order-1 w-5/12"></div>
-              <div
-                class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
-              >
-                <h1 class="mx-auto font-semibold text-lg text-white">22</h1>
-              </div>
-              <div
-                class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4"
-              >
-                <h3 class="mb-3 font-bold text-white text-xl">
-                  Announcement of the top 10 teams
-                </h3>
-                <p
-                  class="text-sm leading-snug tracking-wide text-gray-100 text-opacity-100"
-                >
-                  9:00 am
-                </p>
-              </div>
-            </div>
-
-            <!-- left timeline -->
-            <div
-              class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
-            >
-              <div class="order-1 w-5/12"></div>
-              <div
-                class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
-              >
-                <h1 class="mx-auto text-white font-semibold text-lg">23</h1>
-              </div>
-              <div
-                class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4"
-                style="text-align: right"
-              >
-                <h3 class="mb-3 font-bold text-white text-xl">
-                  Presentations
-                </h3>
-                <p
-                  class="text-sm font-medium leading-snug tracking-wide text-gray-100 text-opacity-100"
-                >
-                  9:30 am
-                </p>
-              </div>
-            </div>
-
-            <!-- right timeline -->
-            <div
-              class="mb-8 flex justify-between items-center w-full right-timeline"
-            >
-              <div class="order-1 w-5/12"></div>
-              <div
-                class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
-              >
-                <h1 class="mx-auto font-semibold text-lg text-white">24</h1>
-              </div>
-              <div
-                class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4"
-              >
-                <h3 class="mb-3 font-bold text-white text-xl">
-                  Result Declaration
-                </h3>
-                <p
-                  class="text-sm leading-snug tracking-wide text-gray-100 text-opacity-100"
-                >
-                  1:30 pm
-                </p>
-              </div>
-            </div>
-
-            <!-- left timeline -->
-            <div
-              class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
-            >
-              <div class="order-1 w-5/12"></div>
-              <div
-                class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
-              >
-                <h1 class="mx-auto text-white font-semibold text-lg">25</h1>
-              </div>
-              <div
-                class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4"
-                style="text-align: right"
-              >
-                <h3 class="mb-3 font-bold text-white text-xl">
-                  Closing Ceremony
-                </h3>
-                <p
-                  class="text-sm font-medium leading-snug tracking-wide text-gray-100 text-opacity-100"
-                >
-                  2:00 pm
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <hr
-      style="height:2px; border-width:0; background-color:#CCCCCC; margin: 0 auto"
-      width="90%"
-    />
-
-    <!--     FAQ section -->
-    <section class="mx-auto max-w-xl py-14" id="faq">
-      <h1
-        class="sm:text-3xl text-2xl font-bold title-font mb-2 text-gray-900 text-center"
-      >
-        Frequently Asked Questions
-      </h1>
-      <div class="pt-4 flex flex-col flex-wrap text-left">
-        <details class="px-4 pt-4 my-1">
-          <summary class="outline-none cursor-pointer"
-            ><strong>What's a Hackathon ?</strong></summary
-          >
-          <div style="padding-left: 20px;">
-            A Hackathon is an intense event that brings together designers and
-            developers along with industry experts to identify problems and
-            create software solutions, usually within 24-48 hours<br />
-          </div>
-        </details>
-        <details class="px-4 pt-4 my-1">
-          <summary class="outline-none cursor-pointer"
-            ><strong>What is the eligibility criteria ?</strong></summary
-          >
-          <div style="padding-left: 20px;">
-            You must be a University / College student.<br />
-          </div>
-        </details>
-
-        <details class="px-4 pt-4 my-1">
-          <summary class="outline-none cursor-pointer"
-            ><strong>What is the registration fee?</strong></summary
-          >
-          <div style="padding-left: 20px;">
-            Go ahead and register, it’s absolutely free.<br />
-          </div>
-        </details>
-
-        <details class="px-4 pt-4 my-1">
-          <summary class="outline-none cursor-pointer"
-            ><strong>What if I am not from CS background</strong></summary
-          >
-          <div style="padding-left: 20px;">
-            Doesn't matter, you are still eligible to apply.<br />
-          </div>
-        </details>
-
-        <details class="px-4 pt-4 my-1">
-          <summary class="outline-none cursor-pointer"
-            ><strong
-              >Can i start working on project before the event?</strong
-            ></summary
-          >
-          <div style="padding-left: 20px;">
-            No, of course you can't, you just can't!!!<br />
-          </div>
-        </details>
-
-        <details class="px-4 pt-4 my-1">
-          <summary class="outline-none cursor-pointer"
-            ><strong>What if I don't want to present my hack?</strong></summary
-          >
-          <div style="padding-left: 20px;">
-            Unfinished or unimpressive (so you think) projects should be
-            presented anyway! Presenting your hack gives you a chance to be
-            proud of what you’ve done, and a constructive perspective of where
-            you should be headed next.<br />
-          </div>
-        </details>
-
-        <details class="px-4 pt-4 my-1">
-          <summary class="outline-none cursor-pointer"
-            ><strong>What is in it for me?</strong></summary
-          >
-          <div style="padding-left: 20px;">
-            We are going to offer prizes worth: ₹ 1,00,000 <br />
-            Also complementary goodies and a great networking opportunity!<br />
-          </div>
-        </details>
-
-        <details class="px-4 pt-4 my-1">
-          <summary class="outline-none cursor-pointer"
-            ><strong>What should be the team size?</strong></summary
-          >
-          <div style="padding-left: 20px;">Team size should be 3-5.<br /></div>
-        </details>
-
-        <details class="px-4 pt-4 my-1">
-          <summary class="outline-none cursor-pointer"
-            ><strong
-              >Can I attend talks + workshops without being accepted for the
-              Hackathon?</strong
-            ></summary
-          >
-          <div style="padding-left: 20px;">
-            Yes! The conference is going to be open to everyone who's
-            interested. We will keep you folks updated with the schedule and the
-            links to the talks.<br />
-          </div>
-        </details>
-
-        <details class="px-4 pt-4 my-1">
-          <summary class="outline-none cursor-pointer"
-            ><strong>Still got questions?</strong></summary
-          >
-          <div style="padding-left: 20px;">
-            Join the official Discord server!!<br />
-          </div>
-        </details>
-      </div>
-    </section>
-    <hr />
-
-    <!-- *** contact us section *** -->
-
-    <section class="text-gray-400 bg-black body-font relative">
-      <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-col text-center w-full mb-12">
-          <h1 class="sm:text-3xl text-2xl font-bold title-font mb-4 text-white">
-            Contact Us
-          </h1>
-        </div>
-        <form>
-          <div class="lg:w-1/2 md:w-2/3 mx-auto">
-            <div class="flex flex-wrap -m-2">
-              <div class="p-2 w-1/2">
-                <div class="relative">
-                  <label for="name" class="leading-7 text-sm text-gray-300"
-                    >Name</label
+               <h1
+                  class="sm:text-4xl text-2xl mb-4 font-bold text-gray-900 text-left"
+               >
+                  Cicada 3301: Reinvented
+               </h1>
+               <p class="mb-8 leading-relaxed md:text-lg text-left">
+                  Cicada 3301: Reinvented is a 36 hours long virtual hackathon
+                  organized by Microsoft Technical Student Club — DA-IICT, where
+                  you can design, code and create solutions to real-life
+                  problems.
+               </p>
+               <div class="flex justify-center">
+                  <button
+                     class="inline-flex text-white bg-black border-0 py-2 px-6 focus:outline-none rounded"
                   >
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    class="w-full bg-gray-800 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                  />
-                </div>
-              </div>
-              <div class="p-2 w-1/2">
-                <div class="relative">
-                  <label for="contact" class="leading-7 text-sm text-gray-300"
-                    >Contact</label
-                  >
-                  <input
-                    type="text"
-                    id="contact"
-                    name="contact"
-                    maxlength="10"
-                    minlength="10"
-                    class="w-full bg-gray-800 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                  />
-                </div>
-              </div>
-              <div class="p-2 w-full">
-                <div class="relative">
-                  <label for="email" class="leading-7 text-sm text-gray-300"
-                    >Email</label
-                  >
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    class="w-full bg-gray-800 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                  />
-                </div>
-              </div>
-              <div class="p-2 w-full">
-                <div class="relative">
-                  <label for="message" class="leading-7 text-sm text-gray-300"
-                    >Message</label
-                  >
-                  <textarea
-                    id="message"
-                    name="message"
-                    class="w-full bg-gray-800 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-                  ></textarea>
-                </div>
-              </div>
+                     Applications Open Soon
+                  </button>
+               </div>
             </div>
-          </div>
-        </form>
-      </div>
-    </section>
+         </div>
+      </section>
 
-    <!-- *** footer section *** -->
+      <!-- *** About section *** -->
 
-    <footer class="bg-gray-50 body-font">
-      <div
-        class="container px-5 py-12 mx-auto flex flex-wrap flex-col items-center"
-      >
-        <div
-          class="w-100 flex-shrink-0 md:mx-0 mx-auto text-center justify-center items-center"
-        >
-          <a
-            class="flex title-font font-medium items-center justify-center text-black"
-          >
-            <!--*** this image is pretty useless, need svg logo ***-->
-            <img
-              src="https://cdn.glitch.com/ddbf2cd7-5dc8-4a55-ae8f-e5f885f28e8b%2FMSTC-INSTA-LOGO.svg?v=1609928674356"
-              alt="logo"
-              class="md:w-36 w-28"
+      <section class="text-gray-600 body-font wow fadeInUp" id="about-section">
+         <div
+            class="container flex flex-wrap px-5 py-24 mx-auto justify-center text-left"
+         >
+            <div class="md:w-1/2 md:pr-12 md:py-8 md:mb-0 wow zoomIn">
+               <h1 class="sm:text-3xl text-2xl font-bold mb-2">
+                  Bring out the hacker in you!
+               </h1>
+               <p class="leading-relaxed md:text-base pt-4">
+                  Cicada 3301: Reinvented is an initiative by MSTC, DA-IICT to
+                  provide students from colleges across India, with a platform
+                  to prove their development skills by solving some of the
+                  prevelent problems of recent times. The 36 hour hackathon
+                  would offer the participants problem statements based on
+                  different themes. It will be an open invitation for creative
+                  minds to indulge in critical thinking, problem solving and
+                  most importantly, to showcase their capabilities in the domain
+                  of development. The projects made and the ideas ignited would
+                  be the participants’ contribution to open source and the
+                  global developer community. By the end of the hackathon, the
+                  participating teams are to develop any sort of tech-based
+                  solutions to the chosen problem statement.
+               </p>
+               <p class="leading-relaxed md:text-base pt-4">
+                  It would surely be an enriching experience, with a great
+                  opportunity to learn. Cicada 3301: Reinvented, with the
+                  attractive prizes and goodies it has to offer, is designed to
+                  provide the thrust of encouragement for young minds to think,
+                  develop and come up with something real!
+               </p>
+               <br /><br />
+               <p style="text-align: center; font-size: 25px;">
+                  Prizes Worth: <br />
+                  <span style="font-size: 40px;">Over ₹ 60,000</span>
+               </p>
+            </div>
+         </div>
+      </section>
+
+      <!-- *** Timeline *** -->
+      <!-- component -->
+      <section class="py-10" id="timeline" style="z-index: 2;">
+         <h1
+            class="sm:text-3xl text-2xl font-bold mb-2 text-gray-900 text-center wow zoomInUp"
+            data-wow-duration="1.3s"
+            data-wow-delay="-0.5s"
+         >
+            Timeline
+         </h1>
+         <center>
+            <hr
+               style="height: 2px; border-width: 0; background-color: #cccccc;"
+               width="50%"
             />
-          </a>
-          <span class="ml-3 text-xl font-bold">
-            Cicada 3301: Reinvented
-          </span>
-          <p class="mt-2 text-sm text-black">
-            A 2021 Hackathon
-          </p>
+         </center>
+         <div
+            class="container mx-auto w-full h-full text-sm sm:text-normal timeline-box"
+         >
+            <div class="relative wrap overflow-hidden py-10 h-full">
+               <div
+                  class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border"
+                  style="left: 50%;"
+               ></div>
+               <!-- right timeline -->
+               <div
+                  class="mb-8 flex justify-between items-center w-full right-timeline"
+               >
+                  <div class="order-1 w-5/12"></div>
+                  <div
+                     class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
+                  >
+                     <h1 class="mx-auto font-semibold text-2g text-white">1</h1>
+                  </div>
+                  <div
+                     class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4 right-padded wow fadeInRight"
+                  >
+                     <h3 class="mb-2 font-bold text-white text-2g">
+                        Start of Registration Phase
+                     </h3>
+                     <p
+                        class="text-sm leading-snug tracking-wide text-gray-100 text-opacity-100"
+                     >
+                        8th February, 2021
+                     </p>
+                  </div>
+               </div>
 
-          <span
-            class="inline-flex sm:ml-auto sm:mt-12 mt-8 justify-center sm:justify-start"
-          >
-            <a
-              href="https://www.facebook.com/mstcatdaiict/"
-              class="text-gray-500"
-            >
-              <svg
-                fill="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-8 h-8"
-                viewbox="0 0 24 24"
-              >
-                <path
-                  d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
-                ></path>
-              </svg>
-            </a>
-            <a
-              href="https://twitter.com/mstc_daiict"
-              class="ml-3 text-gray-500"
-            >
-              <svg
-                fill="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-8 h-8"
-                viewbox="0 0 24 24"
-              >
-                <path
-                  d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
-                ></path>
-              </svg>
-            </a>
-            <a
-              href="https://www.instagram.com/mstc.daiict/"
-              class="ml-3 text-gray-500"
-            >
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-8 h-8"
-                viewbox="0 0 24 24"
-              >
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                <path
-                  d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
-                ></path>
-              </svg>
-            </a>
-            <a
-              href="mailto:microsoftclub@daiict.ac.in"
-              class="ml-3 text-gray-500"
-            >
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-8 h-8"
-                viewbox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                />
-              </svg>
-            </a>
-          </span>
-        </div>
-      </div>
+               <!-- left timeline -->
+               <div
+                  class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
+               >
+                  <div class="order-1 w-5/12"></div>
+                  <div
+                     class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
+                  >
+                     <h1 class="mx-auto text-white font-semibold text-2g">2</h1>
+                  </div>
+                  <div
+                     class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4 text-align wow fadeInLeft"
+                  >
+                     <h3 class="mb-2 font-bold text-white text-2g">
+                        End of Registration Phase
+                     </h3>
+                     <p
+                        class="text-sm font-medium leading-snug tracking-wide text-gray-100 text-opacity-100"
+                     >
+                        12th March, 2021
+                     </p>
+                  </div>
+               </div>
 
-      <div>
-        <div class="container mx-auto flex flex-wrap flex-col text-center">
-          <p class="text-gray-900 text-sm text-center pb-1">
-            © 2021 Microsoft Student Technical Club, DA-IICT
-          </p>
-        </div>
-      </div>
-    </footer>
-  </body>
+               <!-- right timeline -->
+               <div
+                  class="mb-8 flex justify-between items-center w-full right-timeline"
+               >
+                  <div class="order-1 w-5/12"></div>
+                  <div
+                     class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
+                  >
+                     <h1 class="mx-auto font-semibold text-2g text-white">3</h1>
+                  </div>
+                  <div
+                     class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4 wow fadeInRight"
+                  >
+                     <h3 class="mb-2 font-bold text-white text-2g">
+                        Start of Hacking Phase
+                     </h3>
+                     <p
+                        class="text-sm leading-snug tracking-wide text-gray-100 text-opacity-100"
+                     >
+                        27 March, 2021
+                     </p>
+                  </div>
+               </div>
+
+               <!-- left timeline -->
+               <div
+                  class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
+               >
+                  <div class="order-1 w-5/12"></div>
+                  <div
+                     class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
+                  >
+                     <h1 class="mx-auto text-white font-semibold text-2g">4</h1>
+                  </div>
+                  <div
+                     class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4 text-align wow fadeInLeft"
+                  >
+                     <h3 class="mb-2 font-bold text-white text-2g">
+                        End of Hacking Phase
+                     </h3>
+                     <p
+                        class="text-sm font-medium leading-snug tracking-wide text-gray-100 text-opacity-100"
+                     >
+                        29 March, 2021
+                     </p>
+                  </div>
+               </div>
+
+               <!-- right timeline -->
+               <div
+                  class="mb-8 flex justify-between items-center w-full right-timeline"
+               >
+                  <div class="order-1 w-5/12"></div>
+                  <div
+                     class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full"
+                  >
+                     <h1 class="mx-auto font-semibold text-2g text-white">5</h1>
+                  </div>
+                  <div
+                     class="order-1 bg-black rounded-lg shadow-xl w-5/12 px-4 py-4 wow fadeInRight"
+                  >
+                     <h3 class="mb-2 font-bold text-white text-2g">
+                        Results
+                     </h3>
+                     <p
+                        class="text-sm leading-snug tracking-wide text-gray-100 text-opacity-100"
+                     >
+                        29 March, 2021
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="text-gray-600" id="sponsors">
+         <div class="px-5 py-24 wow fadeInUp">
+            <h1 class="sm:text-4xl text-3xl font-bold mb-2 text-center">
+               Sponsors
+            </h1>
+            <hr
+               style="
+                  height: 2px;
+                  border-width: 0;
+                  background-color: #cccccc;
+                  margin: 0 auto;
+               "
+               width="70%"
+            />
+            <h2 class="sm:text-2xl text-xl font-semibold text-center mt-16">
+               Associate Sponsors
+            </h2>
+            <div class="flex justify-center mb-8">
+               <a
+                  href="https://devfolio.co"
+                  class=""
+                  target="_blank"
+                  rel="noopener"
+               >
+                  <img
+                     src="./assets/sponsors/devfolio.svg"
+                     alt="devfolio"
+                     class="w-64 h-32"
+                  />
+               </a>
+            </div>
+
+            <h2 class="sm:text-2xl text-xl font-semibold mb-2 text-center">
+               Technical Sponsors
+            </h2>
+            <div
+               class="flex justify-center flex-wrap content-around sm:space-x-8"
+            >
+               <a
+                  href="https://tezos.com"
+                  class=""
+                  target="_blank"
+                  rel="noopener"
+               >
+                  <img
+                     src="./assets/sponsors/tezos.svg"
+                     alt="devfolio"
+                     class="w-36 h-24 mr-4 sm:mr-0"
+                  />
+               </a>
+               <a
+                  href="https://portis.io"
+                  class=""
+                  target="_blank"
+                  rel="noopener"
+               >
+                  <img
+                     src="./assets/sponsors/portis.svg"
+                     alt="devfolio"
+                     class="w-36 h-24 mr-4 sm:mr-0"
+                  />
+               </a>
+               <a
+                  href="https://matic.network"
+                  class=""
+                  target="_blank"
+                  rel="noopener"
+               >
+                  <img
+                     src="./assets/sponsors/matic.svg"
+                     alt="devfolio"
+                     class="w-36 h-24 mr-4 sm:mr-0"
+                  />
+               </a>
+            </div>
+         </div>
+      </section>
+
+      <!--     FAQ section -->
+      <section class="mx-auto max-w-xl py-14" id="faq">
+         <h1
+            class="sm:text-3xl text-2xl font-bold mb-2 text-gray-900 text-center"
+         >
+            Frequently Asked Questions
+         </h1>
+         <div class="pt-4 flex flex-col flex-wrap text-left">
+            <details class="px-4 pt-4 my-1">
+               <summary class="outline-none cursor-pointer"
+                  ><strong>What's a Hackathon ?</strong></summary
+               >
+               <div style="padding-left: 20px;">
+                  A Hackathon is an intense event that brings together designers
+                  and developers along with industry experts to identify
+                  problems and create software solutions, usually within 24-48
+                  hours<br />
+               </div>
+            </details>
+            <details class="px-4 pt-4 my-1">
+               <summary class="outline-none cursor-pointer"
+                  ><strong>What is the eligibility criteria ?</strong></summary
+               >
+               <div style="padding-left: 20px;">
+                  You must be a University / College student.<br />
+               </div>
+            </details>
+
+            <details class="px-4 pt-4 my-1">
+               <summary class="outline-none cursor-pointer"
+                  ><strong>What is the registration fee?</strong></summary
+               >
+               <div style="padding-left: 20px;">
+                  Go ahead and register, it’s absolutely free.<br />
+               </div>
+            </details>
+
+            <details class="px-4 pt-4 my-1">
+               <summary class="outline-none cursor-pointer"
+                  ><strong>What if I am not from CS background</strong></summary
+               >
+               <div style="padding-left: 20px;">
+                  Doesn't matter, you are still eligible to apply.<br />
+               </div>
+            </details>
+
+            <details class="px-4 pt-4 my-1">
+               <summary class="outline-none cursor-pointer"
+                  ><strong
+                     >Can i start working on project before the event?</strong
+                  ></summary
+               >
+               <div style="padding-left: 20px;">
+                  No, you should start working only after the hackathon starts
+                  otherwise you can be disqualified!!!<br />
+               </div>
+            </details>
+
+            <details class="px-4 pt-4 my-1">
+               <summary class="outline-none cursor-pointer"
+                  ><strong
+                     >What if I don't want to present my hack?</strong
+                  ></summary
+               >
+               <div style="padding-left: 20px;">
+                  Unfinished or unimpressive (so you think) projects should be
+                  presented anyway! Presenting your hack gives you a chance to
+                  be proud of what you’ve done, and a constructive perspective
+                  of where you should be headed next.<br />
+               </div>
+            </details>
+
+            <details class="px-4 pt-4 my-1">
+               <summary class="outline-none cursor-pointer"
+                  ><strong>What is in it for me?</strong></summary
+               >
+               <div style="padding-left: 20px;">
+                  We are going to offer prizes worth: ₹ 60,000 <br />
+                  Also complementary goodies and a great networking
+                  opportunity!<br />
+               </div>
+            </details>
+
+            <details class="px-4 pt-4 my-1">
+               <summary class="outline-none cursor-pointer"
+                  ><strong>What should be the team size?</strong></summary
+               >
+               <div style="padding-left: 20px;">
+                  Team size should be 3-5.<br />
+               </div>
+            </details>
+
+            <details class="px-4 pt-4 my-1">
+               <summary class="outline-none cursor-pointer"
+                  ><strong
+                     >Can I attend talks + workshops without being accepted for
+                     the Hackathon?</strong
+                  ></summary
+               >
+               <div style="padding-left: 20px;">
+                  Yes! The conference is going to be open to everyone who's
+                  interested. We will keep you folks updated with the schedule
+                  and the links to the talks.<br />
+               </div>
+            </details>
+
+            <details class="px-4 pt-4 my-1">
+               <summary class="outline-none cursor-pointer"
+                  ><strong>Still got questions?</strong></summary
+               >
+               <div style="padding-left: 20px;">
+                  Join the official Discord server!!<br />
+               </div>
+            </details>
+         </div>
+      </section>
+
+      <!-- *** contact us section *** -->
+
+      <section
+         class="text-gray-400 body-font relative wow fadeInUp"
+         id="contactus"
+      >
+         <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-12">
+               <h1 class="sm:text-3xl text-2xl font-bold mb-4 text-white">
+                  Contact Us
+               </h1>
+            </div>
+
+            <form
+               action="https://formspree.io/f/xnqowagr"
+               method="POST"
+               id="sponsors-form"
+            >
+               <div class="lg:w-1/2 md:w-2/3 mx-auto">
+                  <div class="flex flex-wrap -m-2">
+                     <div class="p-2 w-1/2">
+                        <div class="relative">
+                           <label
+                              for="name"
+                              class="leading-7 text-sm text-gray-300"
+                              >Name</label
+                           >
+                           <input
+                              type="text"
+                              id="name"
+                              name="name"
+                              class="w-full bg-gray-800 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                           />
+                        </div>
+                     </div>
+                     <div class="p-2 w-1/2">
+                        <div class="relative">
+                           <label
+                              for="contact"
+                              class="leading-7 text-sm text-gray-300"
+                              >Contact</label
+                           >
+                           <input
+                              type="text"
+                              id="contact"
+                              name="contact"
+                              maxlength="10"
+                              minlength="10"
+                              class="w-full bg-gray-800 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                           />
+                        </div>
+                     </div>
+                     <div class="p-2 w-full">
+                        <div class="relative">
+                           <label
+                              for="email"
+                              class="leading-7 text-sm text-gray-300"
+                              >Email</label
+                           >
+                           <input
+                              type="email"
+                              id="email"
+                              name="email"
+                              class="w-full bg-gray-800 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                           />
+                        </div>
+                     </div>
+
+                     <div class="p-2 w-full">
+                        <span class="leading-7 text-sm text-gray-300"
+                           >Type</span
+                        >
+                        <div class="mt-2">
+                           <label class="inline-flex items-center">
+                              <input
+                                 type="radio"
+                                 class="form-radio"
+                                 name="accountType"
+                                 value="personal"
+                              />
+                              <span
+                                 class="ml-2 radiobutlabel hover:text-gray-100"
+                                 >Participant</span
+                              >
+                           </label>
+                           <label class="inline-flex items-center md:ml-6">
+                              <input
+                                 type="radio"
+                                 class="form-radio"
+                                 name="accountType"
+                                 value="busines"
+                              />
+                              <span
+                                 class="ml-2 radiobutlabel hover:text-gray-100"
+                                 >Sponsor</span
+                              >
+                           </label>
+                        </div>
+                     </div>
+
+                     <div class="p-2 w-full">
+                        <div class="relative">
+                           <label
+                              for="message"
+                              class="leading-7 text-sm text-gray-300"
+                              >Message</label
+                           >
+                           <textarea
+                              id="message"
+                              name="message"
+                              class="w-full bg-gray-800 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                           ></textarea>
+                        </div>
+                     </div>
+
+                     <div class="p-2 w-full flex flex-row">
+                        <button
+                           type="submit"
+                           class="text-black bg-white border-0 py-2 px-6 mx-auto focus:outline-none rounded"
+                        >
+                           Submit
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </section>
+
+      <!-- *** footer section *** -->
+
+      <footer class="bg-gray-50 body-font">
+         <div
+            class="container px-5 py-12 mx-auto flex flex-wrap flex-col items-center"
+         >
+            <div class="w-100 flex-shrink-0 md:mx-0 mx-auto text-center">
+               <a
+                  href="https://mstc.now.sh"
+                  class="flex font-medium items-center justify-center text-black"
+               >
+                  <img
+                     src="./assets/mstc_logo.svg"
+                     alt="logo"
+                     class="md:w-36 w-28"
+                  />
+               </a>
+               <span class="text-xl font-bold">
+                  Cicada 3301: Reinvented
+               </span>
+               <p class="mt-2 text-sm text-black">
+                  A 2021 Hackathon
+               </p>
+
+               <span
+                  class="inline-flex sm:ml-auto sm:mt-12 mt-8 justify-center sm:justify-start"
+               >
+                  <a
+                     href="https://www.facebook.com/mstcatdaiict/"
+                     class="text-gray-500"
+                  >
+                     <svg
+                        fill="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-8 h-8"
+                        viewbox="0 0 24 24"
+                     >
+                        <path
+                           d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                        ></path>
+                     </svg>
+                  </a>
+                  <a
+                     href="https://twitter.com/mstc_daiict"
+                     class="ml-3 text-gray-500"
+                  >
+                     <svg
+                        fill="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-8 h-8"
+                        viewbox="0 0 24 24"
+                     >
+                        <path
+                           d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                        ></path>
+                     </svg>
+                  </a>
+                  <a
+                     href="https://www.instagram.com/mstc.daiict/"
+                     class="ml-3 text-gray-500"
+                  >
+                     <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-8 h-8"
+                        viewbox="0 0 24 24"
+                     >
+                        <rect
+                           width="20"
+                           height="20"
+                           x="2"
+                           y="2"
+                           rx="5"
+                           ry="5"
+                        ></rect>
+                        <path
+                           d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
+                        ></path>
+                     </svg>
+                  </a>
+                  <a
+                     href="mailto:microsoftclub@daiict.ac.in"
+                     class="ml-3 text-gray-500"
+                  >
+                     <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-8 h-8"
+                        viewbox="0 0 24 24"
+                     >
+                        <path
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                           stroke-width="2"
+                           d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        />
+                     </svg>
+                  </a>
+               </span>
+            </div>
+         </div>
+
+         <div>
+            <hr
+               style="
+                  height: 2px;
+                  border-width: 0;
+                  background-color: #cccccc;
+                  margin: 0 auto;
+               "
+               width="80%"
+            />
+            <div class="container mx-auto flex flex-wrap flex-col text-center">
+               <p class="text-gray-900 text-sm text-center pb-1 mt-3 mb-3">
+                  © 2021 Microsoft Student Technical Club, DA-IICT
+               </p>
+            </div>
+         </div>
+      </footer>
+   </body>
 </html>

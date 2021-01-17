@@ -4,21 +4,19 @@
       <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link
          href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
          rel="stylesheet"
       />
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link
          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
          rel="stylesheet"
       />
       <title>Team | Cicada 3301: Reinvented</title>
 
-      <!-- import the webpage's stylesheet -->
       <link rel="stylesheet" href="/style.css" />
 
-      <!-- import the webpage's javascript file -->
       <script src="/script.js" defer></script>
    </head>
    <body>
@@ -72,7 +70,7 @@
                   class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"
                >
                   <div
-                     class="flex-shrink-0 flex items-center cursor-pointer title-font font-semibold"
+                     class="flex-shrink-0 flex items-center cursor-pointer font-semibold"
                      id="title"
                   >
                      <a href="/">Cicada 3301: Reinvented</a>
@@ -80,24 +78,29 @@
                   <div class="hidden sm:block sm:ml-6">
                      <div class="flex space-x-4">
                         <a
-                           href="/index.html"
-                           class="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                           >Home</a
-                        >
-                        <a
-                           href="/index.html#about-section"
+                           href="./index.html#about-section"
                            class="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                            >About Hackathon</a
                         >
                         <a
-                           href="/index.html#timeline"
+                           href="./index.html#timeline"
                            class="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                            >Timeline</a
                         >
                         <a
-                           href="/index.html#faq"
+                           href="./index.html#sponsors"
+                           class="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                           >Sponsors</a
+                        >
+                        <a
+                           href="./index.html#faq"
                            class="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                            >FAQs</a
+                        >
+                        <a
+                           href="./index.html#contactus"
+                           class="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                           >Contact Us</a
                         >
                      </div>
                   </div>
@@ -117,24 +120,29 @@
             <div class="px-2 pt-2 pb-3 space-y-1">
                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                <a
-                  href="/index.html"
-                  class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                  >Home</a
-               >
-               <a
-                  href="/index.html#about-section"
+                  href="./index.html#about-section"
                   class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                   >About Hackathon</a
                >
                <a
-                  href="/index.html#timeline"
+                  href="./index.html#timeline"
                   class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                   >Timeline</a
+               >
+               <a
+                  href="/index.html#sponsors"
+                  class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  >Sponsors</a
                >
                <a
                   href="/index.html#faq"
                   class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                   >FAQs</a
+               >
+               <a
+                  href="/index.html#contactus"
+                  class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  >Contact Us</a
                >
             </div>
          </div>
@@ -144,54 +152,303 @@
       <section class="text-gray-600 body-font">
          <div class="container px-5 py-24 mx-auto">
             <div class="flex flex-col text-center w-full mb-20">
-               <h1
-                  class="text-2xl font-medium title-font mb-4 text-gray-900 tracking-widest"
-               >
+               <h1 class="text-2xl font-medium mb-8 text-gray-900">
                   OUR TEAM
                </h1>
+               <p
+                  class="lg:w-2/3 mx-auto leading-relaxed text-base text-justify px-4"
+               >
+                  We are individuals who come together and share common interest
+                  putting our ideas into existence in order to contribute to the
+                  Open source Community. We try to make ‘I don’t know’ to ‘I
+                  don’t know yet’. Many people have genuine ideas related to App
+                  and Web Development but there is no proper platform provided
+                  to them. We, as MSTC, come here and help them give the right
+                  environment to inculcate their ideas and Develop. We aim to do
+                  this in as exciting and simplified manner as possible. We help
+                  people find answers to their questions, share ideas, solve
+                  problems and help them get more out of their ideas and
+                  technology. We also come up with various events and
+                  competitions which help them to create a strong foundation for
+                  their dream competitions like GSoC, Outreachy, Imagine Cup,
+                  etc.
+               </p>
             </div>
-            <div class="flex flex-wrap -m-4">
-               <div class="p-4 lg:w-1/2 mx-auto">
-                  <div
-                     class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left"
-                  >
+            <div class="flex flex-wrap -m-4 justify-around">
+               <div class="p-4 lg:w-1/4 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center">
                      <img
                         alt="team"
-                        class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
-                        src="https://mstc.now.sh/css/images/vyom.jpeg"
+                        class="flex-shrink-0 rounded-full w-56 h-56 object-cover object-center mb-4"
+                        src="./assets/team/Vyom.jpeg"
                      />
-                     <div class="flex-grow sm:pl-8">
-                        <h2
-                           class="title-font font-medium text-lg text-gray-900"
-                        >
+                     <div class="w-full">
+                        <h2 class="font-medium text-lg text-gray-900">
                            Vyom Saraf
                         </h2>
                         <h3 class="text-gray-500 mb-3">Convener</h3>
-                        <p class="mb-4">
-                           Contact: +91 6358077665
-                        </p>
                      </div>
                   </div>
                </div>
-               <div class="p-4 lg:w-1/2 mx-auto">
-                  <div
-                     class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left"
-                  >
+               <div class="p-4 lg:w-1/4 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center">
                      <img
                         alt="team"
-                        class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
-                        src="https://mstc.now.sh/css/images/vrushti.jpg"
+                        class="flex-shrink-0 rounded-full w-56 h-56 object-cover object-center mb-4"
+                        src="./assets/team/Vrushti.jpg"
                      />
-                     <div class="flex-grow sm:pl-8">
-                        <h2
-                           class="title-font font-medium text-lg text-gray-900"
-                        >
+                     <div class="w-full">
+                        <h2 class="font-medium text-lg text-gray-900">
                            Vrushti Dhola
                         </h2>
                         <h3 class="text-gray-500 mb-3">Deputy Convener</h3>
-                        <p class="mb-4">
-                           Contact: +91 6354543702
-                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="p-4 lg:w-1/4 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center">
+                     <img
+                        alt="team"
+                        class="flex-shrink-0 rounded-full w-56 h-56 object-cover object-center mb-4"
+                        src="./assets/team/Deven.jpeg"
+                     />
+                     <div class="w-full">
+                        <h2 class="font-medium text-lg text-gray-900">
+                           Deven Vachhani
+                        </h2>
+                        <h3 class="text-gray-500 mb-3">Core Member</h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="p-4 lg:w-1/4 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center">
+                     <img
+                        alt="team"
+                        class="flex-shrink-0 rounded-full w-56 h-56 object-cover object-center mb-4"
+                        src="./assets/team/Arka.jpg"
+                     />
+                     <div class="w-full">
+                        <h2 class="font-medium text-lg text-gray-900">
+                           Arkaprabha Banerjee
+                        </h2>
+                        <h3 class="text-gray-500 mb-3">Core Member</h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="p-4 lg:w-1/4 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center">
+                     <img
+                        alt="team"
+                        class="flex-shrink-0 rounded-full w-56 h-56 object-cover object-center mb-4"
+                        src="./assets/team/Dhyey.jpg"
+                     />
+                     <div class="w-full">
+                        <h2 class="font-medium text-lg text-gray-900">
+                           Dhyey Gami
+                        </h2>
+                        <h3 class="text-gray-500 mb-3">Core Member</h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="p-4 lg:w-1/4 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center">
+                     <img
+                        alt="team"
+                        class="flex-shrink-0 rounded-full w-56 h-56 object-cover object-center mb-4"
+                        src="./assets/team/Isha.jpg"
+                     />
+                     <div class="w-full">
+                        <h2 class="font-medium text-lg text-gray-900">
+                           Isha Desai
+                        </h2>
+                        <h3 class="text-gray-500 mb-3">Core Member</h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="p-4 lg:w-1/4 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center">
+                     <img
+                        alt="team"
+                        class="flex-shrink-0 rounded-full w-56 h-56 object-cover object-center mb-4"
+                        src="./assets/team/Dishant.jpg"
+                     />
+                     <div class="w-full">
+                        <h2 class="font-medium text-lg text-gray-900">
+                           Dishant Vyas
+                        </h2>
+                        <h3 class="text-gray-500 mb-3">
+                           Associate Core Member
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="p-4 lg:w-1/4 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center">
+                     <img
+                        alt="team"
+                        class="flex-shrink-0 rounded-full w-56 h-56 object-cover object-center mb-4"
+                        src="./assets/team/Adit.jpg"
+                     />
+                     <div class="w-full">
+                        <h2 class="font-medium text-lg text-gray-900">
+                           Adit Shah
+                        </h2>
+                        <h3 class="text-gray-500 mb-3">
+                           Associate Core Member
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="p-4 lg:w-1/4 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center">
+                     <img
+                        alt="team"
+                        class="flex-shrink-0 rounded-full w-56 h-56 object-cover object-center mb-4"
+                        src="./assets/team/Roneel.jpg"
+                     />
+                     <div class="w-full">
+                        <h2 class="font-medium text-lg text-gray-900">
+                           Roneel Valambhia
+                        </h2>
+                        <h3 class="text-gray-500 mb-3">
+                           Associate Core Member
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="p-4 lg:w-1/4 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center">
+                     <img
+                        alt="team"
+                        class="flex-shrink-0 rounded-full w-56 h-56 object-cover object-center mb-4"
+                        src="./assets/team/Yash.jpeg"
+                     />
+                     <div class="w-full">
+                        <h2 class="font-medium text-lg text-gray-900">
+                           Yash Trivedi
+                        </h2>
+                        <h3 class="text-gray-500 mb-3">
+                           Associate Core Member
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="p-4 lg:w-1/4 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center">
+                     <img
+                        alt="team"
+                        class="flex-shrink-0 rounded-full w-56 h-56 object-cover object-center mb-4"
+                        src="./assets/team/Dev.jpeg"
+                     />
+                     <div class="w-full">
+                        <h2 class="font-medium text-lg text-gray-900">
+                           Dev Choganwala
+                        </h2>
+                        <h3 class="text-gray-500 mb-3">
+                           Associate Core Member
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="p-4 lg:w-1/4 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center">
+                     <img
+                        alt="team"
+                        class="flex-shrink-0 rounded-full w-56 h-56 object-cover object-center mb-4"
+                        src="./assets/team/Dhiraj.jpeg"
+                     />
+                     <div class="w-full">
+                        <h2 class="font-medium text-lg text-gray-900">
+                           Dhiraj Narsinghani
+                        </h2>
+                        <h3 class="text-gray-500 mb-3">
+                           Associate Core Member
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="p-4 lg:w-1/4 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center">
+                     <img
+                        alt="team"
+                        class="flex-shrink-0 rounded-full w-56 h-56 object-cover object-center mb-4"
+                        src="./assets/team/Jinesh.jpeg"
+                     />
+                     <div class="w-full">
+                        <h2 class="font-medium text-lg text-gray-900">
+                           Jinesh Kanjya
+                        </h2>
+                        <h3 class="text-gray-500 mb-3">
+                           Associate Core Member
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="p-4 lg:w-1/4 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center">
+                     <img
+                        alt="team"
+                        class="flex-shrink-0 rounded-full w-56 h-56 object-cover object-center mb-4"
+                        src="./assets/team/Atman.jpg"
+                     />
+                     <div class="w-full">
+                        <h2 class="font-medium text-lg text-gray-900">
+                           Atman Shah
+                        </h2>
+                        <h3 class="text-gray-500 mb-3">
+                           Associate Core Member
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="p-4 lg:w-1/4 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center">
+                     <img
+                        alt="team"
+                        class="flex-shrink-0 rounded-full w-56 h-56 object-cover object-center mb-4"
+                        src="./assets/team/Meet.jpeg"
+                     />
+                     <div class="w-full">
+                        <h2 class="font-medium text-lg text-gray-900">
+                           Meet Bhalodi
+                        </h2>
+                        <h3 class="text-gray-500 mb-3">
+                           Associate Core Member
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="p-4 lg:w-1/4 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center">
+                     <img
+                        alt="team"
+                        class="flex-shrink-0 rounded-full w-56 h-56 object-cover object-center mb-4"
+                        src="./assets/team/AdityaPadhiar.jpg"
+                     />
+                     <div class="w-full">
+                        <h2 class="font-medium text-lg text-gray-900">
+                           Aditya Padhiar
+                        </h2>
+                        <h3 class="text-gray-500 mb-3">
+                           Associate Core Member
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="p-4 lg:w-1/4 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center">
+                     <img
+                        alt="team"
+                        class="flex-shrink-0 rounded-full w-56 h-56 object-cover object-center mb-4"
+                        src="./assets/team/Deepak.jpg"
+                     />
+                     <div class="w-full">
+                        <h2 class="font-medium text-lg text-gray-900">
+                           Deepak Maidasani
+                        </h2>
+                        <h3 class="text-gray-500 mb-3">
+                           Associate Core Member
+                        </h3>
                      </div>
                   </div>
                </div>
@@ -200,7 +457,6 @@
       </section>
 
       <!-- DON'T LET THOSE DOTS FOOL YOU! THEY AIN'T FOR PAGINATION!!! -->
-
       <hr
          style="
             border-top: dotted grey 6px;
@@ -210,25 +466,22 @@
       />
 
       <!-- *** footer section *** -->
-
       <footer class="bg-gray-50 body-font">
          <div
             class="container px-5 py-12 mx-auto flex flex-wrap flex-col items-center"
          >
-            <div
-               class="w-100 flex-shrink-0 md:mx-0 mx-auto text-center justify-center items-center"
-            >
+            <div class="w-100 flex-shrink-0 md:mx-0 mx-auto text-center">
                <a
-                  class="flex title-font font-medium items-center justify-center text-black"
+                  href="https://mstc.now.sh"
+                  class="flex font-medium items-center justify-center text-black"
                >
-                  <!--*** this image is pretty useless, need svg logo ***-->
                   <img
-                     src="https://cdn.glitch.com/ddbf2cd7-5dc8-4a55-ae8f-e5f885f28e8b%2FMSTC-INSTA-LOGO.svg?v=1609928674356"
+                     src="./assets/mstc_logo.svg"
                      alt="logo"
                      class="md:w-36 w-28"
                   />
                </a>
-               <span class="ml-3 text-xl font-bold">
+               <span class="text-xl font-bold">
                   Cicada 3301: Reinvented
                </span>
                <p class="mt-2 text-sm text-black">
@@ -324,8 +577,17 @@
          </div>
 
          <div>
+            <hr
+               style="
+                  height: 2px;
+                  border-width: 0;
+                  background-color: #cccccc;
+                  margin: 0 auto;
+               "
+               width="80%"
+            />
             <div class="container mx-auto flex flex-wrap flex-col text-center">
-               <p class="text-gray-900 text-sm text-center pb-1">
+               <p class="text-gray-900 text-sm text-center pb-1 mt-3 mb-3">
                   © 2021 Microsoft Student Technical Club, DA-IICT
                </p>
             </div>
