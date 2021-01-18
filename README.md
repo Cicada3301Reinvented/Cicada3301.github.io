@@ -1,8 +1,6 @@
 # Cicada 3301: Reinvented
 
-## Status
-
-Development in progress
+A 2021 Hackathon by MSTC, DA-IICT
 
 ## License
 

@@ -167,11 +167,11 @@
 
       <!--  hero    -->
       <section
-         class="bg-gray-50 text-gray-600 body-font p-8 pt-0 m-auto"
+         class="bg-gray-50 text-gray-600 body-font sm:p-8 p-0 m-auto"
          id="hero"
       >
          <div
-            class="container mx-auto flex px-5 sm:py-12 py-12 md:flex-row flex-col items-center"
+            class="container mx-auto flex sm:py-12 py-12 md:flex-row flex-col items-center sm:rounded-xl rounded-none px-8"
          >
             <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
                <img
@@ -206,10 +206,12 @@
       </section>
 
       <!-- *** About section *** -->
-
-      <section class="text-gray-600 body-font wow fadeInUp" id="about-section">
+      <section
+         class="text-gray-50 body-font sm:p-8 p-0 wow fadeInUp"
+         id="about-section"
+      >
          <div
-            class="container flex flex-wrap px-5 py-24 mx-auto justify-center text-left"
+            class="container flex flex-wrap py-24 mx-auto justify-center text-left sm:rounded-xl bg-black rounded-none px-8"
          >
             <div class="md:w-1/2 md:pr-12 md:py-8 md:mb-0 wow zoomIn">
                <h1 class="sm:text-3xl text-2xl font-bold mb-2">
@@ -300,7 +302,6 @@
       </section>
 
       <!-- *** Timeline *** -->
-      <!-- component -->
       <section class="py-10" id="timeline" style="z-index: 2;">
          <h1
             class="sm:text-3xl text-2xl font-bold mb-2 text-gray-900 text-center wow zoomInUp"
@@ -309,12 +310,9 @@
          >
             Timeline
          </h1>
-         <center>
-            <hr
-               style="height: 2px; border-width: 0; background-color: #cccccc;"
-               width="50%"
-            />
-         </center>
+
+         <hr class="h-0.5 bg-gray-300 w-3/5 mx-auto" />
+
          <div
             class="container mx-auto w-full h-full text-sm sm:text-normal timeline-box"
          >
@@ -446,30 +444,19 @@
          </div>
       </section>
 
-      <section class="text-gray-600" id="sponsors">
-         <div class="px-5 py-24 wow fadeInUp">
+      <section class="text-gray-50 sm:p-8 p-0" id="sponsors">
+         <div
+            class="px-8 py-24 sm:rounded-xl rounded-none bg-black wow fadeInUp"
+         >
             <h1 class="sm:text-4xl text-3xl font-bold mb-2 text-center">
                Sponsors
             </h1>
-            <hr
-               style="
-                  height: 2px;
-                  border-width: 0;
-                  background-color: #cccccc;
-                  margin: 0 auto;
-               "
-               width="70%"
-            />
+            <hr class="h-0.5 mx-auto w-3/5 bg-gray-300" />
             <h2 class="sm:text-2xl text-xl font-semibold text-center mt-16">
                Associate Sponsors
             </h2>
             <div class="flex justify-center mb-8">
-               <a
-                  href="https://devfolio.co"
-                  class=""
-                  target="_blank"
-                  rel="noopener"
-               >
+               <a href="https://devfolio.co" target="_blank" rel="noopener">
                   <img
                      src="./assets/sponsors/devfolio.svg"
                      alt="devfolio"
@@ -484,39 +471,24 @@
             <div
                class="flex justify-center flex-wrap content-around sm:space-x-8"
             >
-               <a
-                  href="https://tezos.com"
-                  class=""
-                  target="_blank"
-                  rel="noopener"
-               >
+               <a href="https://tezos.com" target="_blank" rel="noopener">
                   <img
                      src="./assets/sponsors/tezos.svg"
-                     alt="devfolio"
+                     alt="tezos"
                      class="w-36 h-24 mr-4 sm:mr-0"
                   />
                </a>
-               <a
-                  href="https://portis.io"
-                  class=""
-                  target="_blank"
-                  rel="noopener"
-               >
+               <a href="https://portis.io" target="_blank" rel="noopener">
                   <img
                      src="./assets/sponsors/portis.svg"
-                     alt="devfolio"
+                     alt="portis"
                      class="w-36 h-24 mr-4 sm:mr-0"
                   />
                </a>
-               <a
-                  href="https://matic.network"
-                  class=""
-                  target="_blank"
-                  rel="noopener"
-               >
+               <a href="https://matic.network" target="_blank" rel="noopener">
                   <img
                      src="./assets/sponsors/matic.svg"
-                     alt="devfolio"
+                     alt="matic"
                      class="w-36 h-24 mr-4 sm:mr-0"
                   />
                </a>
@@ -531,64 +503,64 @@
          >
             Frequently Asked Questions
          </h1>
-         <div class="pt-4 flex flex-col flex-wrap text-left">
-            <details class="px-4 pt-4 my-1">
+         <div class="pt-4 flex flex-col flex-wrap text-left px-8">
+            <details class="pt-4 my-1">
                <summary class="outline-none cursor-pointer"
                   ><strong>What's a Hackathon ?</strong></summary
                >
-               <div style="padding-left: 20px;">
+               <div class="pl-5">
                   A Hackathon is an intense event that brings together designers
                   and developers along with industry experts to identify
                   problems and create software solutions, usually within 24-48
                   hours<br />
                </div>
             </details>
-            <details class="px-4 pt-4 my-1">
+            <details class="pt-4 my-1">
                <summary class="outline-none cursor-pointer"
                   ><strong>What is the eligibility criteria ?</strong></summary
                >
-               <div style="padding-left: 20px;">
+               <div class="pl-5">
                   You must be a University / College student.<br />
                </div>
             </details>
 
-            <details class="px-4 pt-4 my-1">
+            <details class="pt-4 my-1">
                <summary class="outline-none cursor-pointer"
                   ><strong>What is the registration fee?</strong></summary
                >
-               <div style="padding-left: 20px;">
+               <div class="pl-5">
                   Go ahead and register, it’s absolutely free.<br />
                </div>
             </details>
 
-            <details class="px-4 pt-4 my-1">
+            <details class="pt-4 my-1">
                <summary class="outline-none cursor-pointer"
                   ><strong>What if I am not from CS background</strong></summary
                >
-               <div style="padding-left: 20px;">
+               <div class="pl-5">
                   Doesn't matter, you are still eligible to apply.<br />
                </div>
             </details>
 
-            <details class="px-4 pt-4 my-1">
+            <details class="pt-4 my-1">
                <summary class="outline-none cursor-pointer"
                   ><strong
                      >Can i start working on project before the event?</strong
                   ></summary
                >
-               <div style="padding-left: 20px;">
+               <div class="pl-5">
                   No, you should start working only after the hackathon starts
                   otherwise you can be disqualified!!!<br />
                </div>
             </details>
 
-            <details class="px-4 pt-4 my-1">
+            <details class="pt-4 my-1">
                <summary class="outline-none cursor-pointer"
                   ><strong
                      >What if I don't want to present my hack?</strong
                   ></summary
                >
-               <div style="padding-left: 20px;">
+               <div class="pl-5">
                   Unfinished or unimpressive (so you think) projects should be
                   presented anyway! Presenting your hack gives you a chance to
                   be proud of what you’ve done, and a constructive perspective
@@ -596,58 +568,53 @@
                </div>
             </details>
 
-            <details class="px-4 pt-4 my-1">
+            <details class="pt-4 my-1">
                <summary class="outline-none cursor-pointer"
                   ><strong>What is in it for me?</strong></summary
                >
-               <div style="padding-left: 20px;">
+               <div class="pl-5">
                   We are going to offer prizes worth: ₹ 60,000 <br />
                   Also complementary goodies and a great networking
                   opportunity!<br />
                </div>
             </details>
 
-            <details class="px-4 pt-4 my-1">
+            <details class="pt-4 my-1">
                <summary class="outline-none cursor-pointer"
                   ><strong>What should be the team size?</strong></summary
                >
-               <div style="padding-left: 20px;">
-                  Team size should be 3-5.<br />
-               </div>
+               <div class="pl-5">Team size should be 3-5.<br /></div>
             </details>
 
-            <details class="px-4 pt-4 my-1">
+            <details class="pt-4 my-1">
                <summary class="outline-none cursor-pointer"
                   ><strong
                      >Can I attend talks + workshops without being accepted for
                      the Hackathon?</strong
                   ></summary
                >
-               <div style="padding-left: 20px;">
+               <div class="pl-5">
                   Yes! The conference is going to be open to everyone who's
                   interested. We will keep you folks updated with the schedule
                   and the links to the talks.<br />
                </div>
             </details>
 
-            <details class="px-4 pt-4 my-1">
+            <details class="pt-4 my-1">
                <summary class="outline-none cursor-pointer"
                   ><strong>Still got questions?</strong></summary
                >
-               <div style="padding-left: 20px;">
-                  Join the official Discord server!!<br />
-               </div>
+               <div class="pl-5">Join the official Discord server!!<br /></div>
             </details>
          </div>
       </section>
 
       <!-- *** contact us section *** -->
-
       <section
-         class="text-gray-400 body-font relative wow fadeInUp"
+         class="text-gray-50 sm:p-8 p-0 body-font relative wow fadeInUp"
          id="contactus"
       >
-         <div class="container px-5 py-24 mx-auto">
+         <div class="container px-8 py-24 mx-auto sm:rounded-xl bg-black">
             <div class="flex flex-col text-center w-full mb-12">
                <h1 class="sm:text-3xl text-2xl font-bold mb-4 text-white">
                   Contact Us
@@ -666,12 +633,14 @@
                            <label
                               for="name"
                               class="leading-7 text-sm text-gray-300"
-                              >Name</label
                            >
+                              Name
+                           </label>
                            <input
                               type="text"
                               id="name"
                               name="name"
+                              required
                               class="w-full bg-gray-800 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                            />
                         </div>
@@ -681,14 +650,16 @@
                            <label
                               for="contact"
                               class="leading-7 text-sm text-gray-300"
-                              >Contact</label
                            >
+                              Contact
+                           </label>
                            <input
                               type="text"
                               id="contact"
                               name="contact"
                               maxlength="10"
                               minlength="10"
+                              required
                               class="w-full bg-gray-800 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                            />
                         </div>
@@ -698,45 +669,51 @@
                            <label
                               for="email"
                               class="leading-7 text-sm text-gray-300"
-                              >Email</label
                            >
+                              Email
+                           </label>
                            <input
                               type="email"
                               id="email"
                               name="email"
+                              required
                               class="w-full bg-gray-800 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                            />
                         </div>
                      </div>
 
                      <div class="p-2 w-full">
-                        <span class="leading-7 text-sm text-gray-300"
-                           >Type</span
-                        >
+                        <span class="leading-7 text-sm text-gray-300">
+                           Type
+                        </span>
                         <div class="mt-2">
                            <label class="inline-flex items-center">
                               <input
                                  type="radio"
                                  class="form-radio"
                                  name="accountType"
-                                 value="personal"
+                                 value="participant"
+                                 required
                               />
                               <span
                                  class="ml-2 radiobutlabel hover:text-gray-100"
-                                 >Participant</span
                               >
+                                 Participant
+                              </span>
                            </label>
                            <label class="inline-flex items-center md:ml-6">
                               <input
                                  type="radio"
                                  class="form-radio"
                                  name="accountType"
-                                 value="busines"
+                                 value="sponsor"
+                                 required
                               />
                               <span
                                  class="ml-2 radiobutlabel hover:text-gray-100"
-                                 >Sponsor</span
                               >
+                                 Sponsor
+                              </span>
                            </label>
                         </div>
                      </div>
@@ -746,11 +723,13 @@
                            <label
                               for="message"
                               class="leading-7 text-sm text-gray-300"
-                              >Message</label
                            >
+                              Message
+                           </label>
                            <textarea
                               id="message"
                               name="message"
+                              required
                               class="w-full bg-gray-800 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                            ></textarea>
                         </div>
@@ -883,15 +862,7 @@
          </div>
 
          <div>
-            <hr
-               style="
-                  height: 2px;
-                  border-width: 0;
-                  background-color: #cccccc;
-                  margin: 0 auto;
-               "
-               width="80%"
-            />
+            <hr class="h-0.5 mx-auto w-4/5 bg-gray-300" />
             <div class="container mx-auto flex flex-wrap flex-col text-center">
                <p class="text-gray-900 text-sm text-center pb-1 mt-3 mb-3">
                   © 2021 Microsoft Student Technical Club, DA-IICT
