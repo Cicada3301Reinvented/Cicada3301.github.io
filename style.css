@@ -124,3 +124,19 @@ label .radiobutlabel:before {
    transition: 0.25s ease;
    box-shadow: inset 0 0 0 0.125em #00005c;
 }
+
+.judges{
+  position: relative;
+}
+.judges .judge-detail{
+  position: absolute;
+  bottom: 0;
+  background: rgba(255,255,255,0.5);
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.3s;
+}
+.judges:hover .judge-detail{
+  transform: translateY(-75%);
+  opacity: 1;
+}
