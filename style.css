@@ -132,8 +132,9 @@ label .radiobutlabel:before {
   position: absolute;
   bottom: 0;
    height: 100%;
-   display: grid;
-   place-items: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
   background: rgba(255,255,255,0.5);
   transform: translateY(100%);
   opacity: 0;
